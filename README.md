@@ -130,7 +130,7 @@ Python Validation
 
 After computing correlations in SQL, I connected the dataset to Python for deeper validation.
 
-   - Generated correlation heatmaps to detect multicollinearity
+   - Generated correlation heatmaps to detect multicollinearity (See my_heatmap.png)
 
    - Compared feature importance rankings to SQL correlation outputs
 
