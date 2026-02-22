@@ -32,35 +32,35 @@ I structured the analysis in three stages:
 
 1. Data Preparation
 
-Created a Change_In_Score field
+   - Created a Change_In_Score field
 
-Classified students into socioeconomic tiers
+   - Classified students into socioeconomic tiers
 
-Cleaned and standardized fields
+   - Cleaned and standardized fields
 
 2. Benchmarking with Window Functions
 
-AVG() over partitions for school comparison
+   - AVG() over partitions for school comparison
 
-RANK() for within-school ranking
+   - RANK() for within-school ranking
 
-PERCENT_RANK() for global percentile
+   - PERCENT_RANK() for global percentile
 
-LAG() to measure peer performance gaps
+   - LAG() to measure peer performance gaps
 
 3. Manual Pearson Correlation
 
-I implemented the formula:
+   - I implemented the formula:
 
-r = ( nΣXY − ΣXΣY ) / √[(nΣX² − (ΣX)²)(nΣY² − (ΣY)²)]
+      r = ( nΣXY − ΣXΣY ) / √[(nΣX² − (ΣX)²)(nΣY² − (ΣY)²)]
 
-This allowed me to measure correlation between:
+   -  This allowed me to measure correlation between:
 
-Tutoring Sessions and Exam Score
+      - Tutoring Sessions and Exam Score
 
-Attendance Percentage and Exam Score
+      - Attendance Percentage and Exam Score
 
-Hours Studied and Exam Score
+      - Hours Studied and Exam Score
 
 Core SQL Query
 /* ANALYSIS OBJECTIVE: 
