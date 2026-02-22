@@ -69,6 +69,7 @@ Core SQL Query
    3. Student analysis using Window Functions.
 */
 
+```
 WITH Student_Cleaned AS (
     SELECT *, 
         (Exam_Score - Previous_Scores) AS Change_In_Score,
@@ -124,33 +125,30 @@ FROM Growth_Analysis
 GROUP BY School_Type, Socioeconomic_Status
 HAVING COUNT(*) > 1
 ORDER BY School_Type, Avg_Exam_Score DESC;
+```
 Python Validation
 
 After computing correlations in SQL, I connected the dataset to Python for deeper validation.
 
-In Python, I:
+   - Generated correlation heatmaps to detect multicollinearity
 
-Generated correlation heatmaps to detect multicollinearity
+   - Compared feature importance rankings to SQL correlation outputs
 
-Trained a Random Forest Regressor to evaluate non-linear feature importance
-
-Compared feature importance rankings to SQL correlation outputs
-
-The modeling confirmed that tutoring and attendance were consistently strong predictors of exam performance.
+   - The modeling confirmed that hours studied and attendance were consistently strong predictors of exam performance.
 
 Tableau Dashboard
 
 I built an interactive dashboard focused on instructional equity.
 
-It includes:
+   - It includes:
 
-Equity gap scatter plots
+      - Equity gap scatter plots
 
-Teacher quality vs income analysis
+      - Teacher quality vs income analysis
 
-Risk segmentation quadrants
+      - Risk segmentation quadrants
 
-Filters for school type, gender, and learning disabilities
+      - Filters for school type, gender, and learning disabilities
 
 The goal was to make the findings usable for stakeholders rather than purely analytical.
 
